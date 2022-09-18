@@ -78,7 +78,7 @@ if flag.controlFlag==0:
     
     
 st.write(flag.controlFlag)
-st.write("tarik")    
+st.write("tarik", flag.controlFlag)    
 
 import time 
 from IPython.display import clear_output 
