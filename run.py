@@ -2,6 +2,7 @@ from tendo import singleton
 from subprocess import PIPE, Popen
 import subprocess
 import math
+import sys
 
 try:
     me = singleton.SingleInstance()
