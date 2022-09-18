@@ -20,6 +20,7 @@ RUN pip3 install --upgrade setuptools
 RUN pip3 install --upgrade pip
 RUN pip3 install altair vega_datasets
 RUN pip3 install streamlit
+RUN pip3 install tendo
 
 
 COPY streamlit_app.py /usr/local/bin/
