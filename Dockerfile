@@ -24,8 +24,8 @@ RUN pip3 install streamlit
 
 COPY streamlit_app.py /usr/local/bin/
 RUN chmod +x /usr/local/bin/streamlit_app.py
-COPY docker-entrypoint.sh /usr/local/bin/
-RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+COPY flag.py /usr/local/bin/
+RUN chmod +x /usr/local/bin/flag.py
 EXPOSE 8501
 WORKDIR   /usr/local/bin/
 ENTRYPOINT ["streamlit", "run", "streamlit_app.py"]
