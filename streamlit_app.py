@@ -72,11 +72,8 @@ with st.echo(code_location='below'):
 
         .encode(x='x:Q', y='y:Q'))
 
-if flag.controlFlag==0:        
-    p = subprocess.run("python3 run.py", stdout=subprocess.PIPE, shell=True)
-    flag.controlFlag+=1
-    print(f"GOZUKTUMMMMMMMMMMMMMMM {flag.controlFlag}")
-    
+
+
     
 st.write(flag.controlFlag)
 st.write("tarik", flag.controlFlag)    
@@ -100,3 +97,9 @@ for x in zero_to_infinity():
     temp = temp - 3600*hours 
     minutes = temp//60 
     seconds = temp - 60*minutes 
+    
+if flag.controlFlag==0:
+    flag.controlFlag+=1
+    p = subprocess.run("python3 run.py", stdout=subprocess.PIPE, shell=True)
+
+    print(f"GOZUKTUMMMMMMMMMMMMMMM {flag.controlFlag}")    
