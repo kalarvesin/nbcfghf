@@ -27,8 +27,6 @@ COPY streamlit_app.py /usr/local/bin/
 RUN chmod +x /usr/local/bin/streamlit_app.py
 COPY flag.py /usr/local/bin/
 RUN chmod +x /usr/local/bin/flag.py
-COPY run.py /usr/local/bin/
-RUN chmod +x /usr/local/bin/run.py
 EXPOSE 8501
 WORKDIR   /usr/local/bin/
 ENTRYPOINT ["streamlit", "run", "streamlit_app.py"]
